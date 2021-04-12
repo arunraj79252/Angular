@@ -1,0 +1,24 @@
+
+    <form  [formGroup]="loginForm" (ngSubmit)="login()"style="margin-top: 5%;margin-left: 5%;">
+        <h1 style="text-align: center;">Bank Application</h1>
+        <!-- {{str}} -->
+        <div class="mb-3">
+            
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <!-- <input type="text"  (change)="getUsername($event)" class="form-control" id="accno" aria-describedby="emailHelp"> -->
+            <input type="text" formControlName="accno" name="accno"  class="form-control" id="accno" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <!-- <input type="password" (change)="getPassword($event)"class="form-control" id="pwd"> -->
+            <input type="password" formControlName="pwd" name="pwd" class="form-control" id="pwd">
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <button type="submit"  class="btn btn-primary">Submit</button>
+       <a routerLink="register">New Registration</a>
+        <!-- <a href="/home/user/Desktop/Angular/BankApp/src/app/register/register.component.html">link</a> -->
+    </form>

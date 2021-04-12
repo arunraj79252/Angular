@@ -1,0 +1,26 @@
+<form [formGroup]="registerForm" (ngSubmit)="registration()"style="margin-top: 5%;margin-left: 5%;">
+        
+<h1 style="text-align: center;">Registration Form</h1>
+    
+        <div class="mb-3">
+            
+            <label for="exampleInputEmail" class="form-label">Email address</label>
+            <input type="text"  formControlName="email" class="form-control" name="email" aria-describedby="emailHelp">
+            <div *ngIf="this.registerForm.get('email')?.touched&&this.registerForm.get('email')?.errors"  class="error">Invalid username</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword" class="form-label">Password</label>
+            <!-- <input type="password" class="form-control" [(ngModel)]="pwd" name="pwd"> -->
+            <input type="password" class="form-control" formControlName="pwd" name="pwd">
+        </div>
+        <div class="mb-3">
+            <label for="exampleinputaccno" class="form-label">Account Number</label>
+            <input type="text" class="form-control" formControlName="accno" name="accno">
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <button type="submit"   class="btn btn-primary">Submit</button>
+        <!-- <a href="/home/user/Desktop/Angular/BankApp/src/app/register/register.component.html">link</a> -->
+    </form>
